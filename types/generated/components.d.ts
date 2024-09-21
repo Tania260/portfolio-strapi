@@ -1,106 +1,5 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
-export interface ComponentsText extends Schema.Component {
-  collectionName: 'components_components_texts';
-  info: {
-    displayName: 'text';
-    description: '';
-  };
-  attributes: {
-    itemText: Attribute.String;
-  };
-}
-
-export interface ComponentsServiceCard extends Schema.Component {
-  collectionName: 'components_components_service_cards';
-  info: {
-    displayName: 'serviceCard';
-  };
-  attributes: {
-    title: Attribute.String;
-    text: Attribute.Text;
-    link: Attribute.Component<'components.link'>;
-  };
-}
-
-export interface ComponentsProjectCard extends Schema.Component {
-  collectionName: 'components_components_project_cards';
-  info: {
-    displayName: 'ProjectCard';
-  };
-  attributes: {
-    image: Attribute.Media<'images'>;
-    title: Attribute.String;
-    text: Attribute.String;
-    link: Attribute.Component<'components.link'>;
-  };
-}
-
-export interface ComponentsProcessCard extends Schema.Component {
-  collectionName: 'components_components_process_cards';
-  info: {
-    displayName: 'ProcessCard';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String;
-    text: Attribute.Blocks;
-  };
-}
-
-export interface ComponentsPriceCard extends Schema.Component {
-  collectionName: 'components_components_price_cards';
-  info: {
-    displayName: 'priceCard';
-    description: '';
-  };
-  attributes: {
-    heading: Attribute.String;
-    title: Attribute.String;
-    subTitle: Attribute.Text;
-    items: Attribute.Component<'components.text', true>;
-    term: Attribute.String;
-  };
-}
-
-export interface ComponentsLink extends Schema.Component {
-  collectionName: 'components_components_links';
-  info: {
-    displayName: 'link';
-  };
-  attributes: {
-    url: Attribute.String;
-    text: Attribute.String;
-    isExternal: Attribute.Boolean &
-      Attribute.Required &
-      Attribute.DefaultTo<false>;
-  };
-}
-
-export interface ElementsFaqItem extends Schema.Component {
-  collectionName: 'components_elements_faq_items';
-  info: {
-    displayName: 'faqItem';
-  };
-  attributes: {
-    question: Attribute.String;
-    answer: Attribute.Text;
-  };
-}
-
-export interface ElementsAdditionalServiceCard extends Schema.Component {
-  collectionName: 'components_elements_additional_service_cards';
-  info: {
-    displayName: 'additionalServiceCard';
-  };
-  attributes: {
-    heading: Attribute.String;
-    title: Attribute.String;
-    numList: Attribute.Component<'components.text', true>;
-    bulList: Attribute.Component<'components.text', true>;
-  };
-}
-
 export interface LayoutWorksSection extends Schema.Component {
   collectionName: 'components_layout_works_sections';
   info: {
@@ -273,17 +172,110 @@ export interface LayoutAboutMe extends Schema.Component {
   };
 }
 
+export interface ElementsFaqItem extends Schema.Component {
+  collectionName: 'components_elements_faq_items';
+  info: {
+    displayName: 'faqItem';
+  };
+  attributes: {
+    question: Attribute.String;
+    answer: Attribute.Text;
+  };
+}
+
+export interface ElementsAdditionalServiceCard extends Schema.Component {
+  collectionName: 'components_elements_additional_service_cards';
+  info: {
+    displayName: 'additionalServiceCard';
+  };
+  attributes: {
+    heading: Attribute.String;
+    title: Attribute.String;
+    numList: Attribute.Component<'components.text', true>;
+    bulList: Attribute.Component<'components.text', true>;
+  };
+}
+
+export interface ComponentsText extends Schema.Component {
+  collectionName: 'components_components_texts';
+  info: {
+    displayName: 'text';
+    description: '';
+  };
+  attributes: {
+    itemText: Attribute.String;
+  };
+}
+
+export interface ComponentsServiceCard extends Schema.Component {
+  collectionName: 'components_components_service_cards';
+  info: {
+    displayName: 'serviceCard';
+  };
+  attributes: {
+    title: Attribute.String;
+    text: Attribute.Text;
+    link: Attribute.Component<'components.link'>;
+  };
+}
+
+export interface ComponentsProjectCard extends Schema.Component {
+  collectionName: 'components_components_project_cards';
+  info: {
+    displayName: 'ProjectCard';
+  };
+  attributes: {
+    image: Attribute.Media<'images'>;
+    title: Attribute.String;
+    text: Attribute.String;
+    link: Attribute.Component<'components.link'>;
+  };
+}
+
+export interface ComponentsProcessCard extends Schema.Component {
+  collectionName: 'components_components_process_cards';
+  info: {
+    displayName: 'ProcessCard';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    text: Attribute.Blocks;
+  };
+}
+
+export interface ComponentsPriceCard extends Schema.Component {
+  collectionName: 'components_components_price_cards';
+  info: {
+    displayName: 'priceCard';
+    description: '';
+  };
+  attributes: {
+    heading: Attribute.String;
+    title: Attribute.String;
+    subTitle: Attribute.Text;
+    items: Attribute.Component<'components.text', true>;
+    term: Attribute.String;
+  };
+}
+
+export interface ComponentsLink extends Schema.Component {
+  collectionName: 'components_components_links';
+  info: {
+    displayName: 'link';
+  };
+  attributes: {
+    url: Attribute.String;
+    text: Attribute.String;
+    isExternal: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<false>;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
-      'components.text': ComponentsText;
-      'components.service-card': ComponentsServiceCard;
-      'components.project-card': ComponentsProjectCard;
-      'components.process-card': ComponentsProcessCard;
-      'components.price-card': ComponentsPriceCard;
-      'components.link': ComponentsLink;
-      'elements.faq-item': ElementsFaqItem;
-      'elements.additional-service-card': ElementsAdditionalServiceCard;
       'layout.works-section': LayoutWorksSection;
       'layout.working-with-me': LayoutWorkingWithMe;
       'layout.work-section': LayoutWorkSection;
@@ -297,6 +289,14 @@ declare module '@strapi/types' {
       'layout.footer': LayoutFooter;
       'layout.faq': LayoutFaq;
       'layout.about-me': LayoutAboutMe;
+      'elements.faq-item': ElementsFaqItem;
+      'elements.additional-service-card': ElementsAdditionalServiceCard;
+      'components.text': ComponentsText;
+      'components.service-card': ComponentsServiceCard;
+      'components.project-card': ComponentsProjectCard;
+      'components.process-card': ComponentsProcessCard;
+      'components.price-card': ComponentsPriceCard;
+      'components.link': ComponentsLink;
     }
   }
 }
