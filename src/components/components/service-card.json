@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_components_service_cards",
+  "info": {
+    "displayName": "serviceCard"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.link"
+    }
+  }
+}

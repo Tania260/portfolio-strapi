@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_layout_works_sections",
+  "info": {
+    "displayName": "WebsitesSection",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

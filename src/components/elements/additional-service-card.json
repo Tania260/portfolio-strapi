@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_elements_additional_service_cards",
+  "info": {
+    "displayName": "additionalServiceCard"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "numList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.text"
+    },
+    "bulList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.text"
+    }
+  }
+}

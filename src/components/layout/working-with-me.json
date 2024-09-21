@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_layout_working_with_mes",
+  "info": {
+    "displayName": "WorkingWithMe",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "advantages": {
+      "displayName": "text",
+      "type": "component",
+      "repeatable": true,
+      "component": "components.text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

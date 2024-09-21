@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_layout_process_sections",
+  "info": {
+    "displayName": "ProcessSection",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.link"
+    },
+    "processCards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.process-card"
+    }
+  }
+}

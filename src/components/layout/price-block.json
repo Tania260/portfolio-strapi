@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_layout_price_blocks",
+  "info": {
+    "displayName": "priceBlock"
+  },
+  "options": {},
+  "attributes": {
+    "id_relation": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "text"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.link"
+    },
+    "priceCards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.price-card"
+    },
+    "additionalServiceCard": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.additional-service-card"
+    }
+  }
+}

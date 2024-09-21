@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_layout_selected_work_sections",
+  "info": {
+    "displayName": "SelectedWorkSection"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.link"
+    },
+    "ProjectCard": {
+      "displayName": "projectCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "components.project-card"
+    }
+  }
+}
